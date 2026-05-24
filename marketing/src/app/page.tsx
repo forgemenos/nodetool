@@ -62,6 +62,7 @@ const navigation = [
   { name: "Studio", href: "/studio" },
   { name: "Cloud", href: "/cloud" },
   { name: "Agents", href: "/agents" },
+  { name: "Workflows", href: "/workflows" },
   { name: "Developers", href: "/developers" },
   { name: "Features", href: "#features" },
   { name: "Community", href: "#contact" },
