@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import { ToolbarIconButton } from "../ui_primitives";
 import { useResizePanel } from "../../hooks/handlers/useResizePanel";
-import { useCombo } from "../../stores/KeyPressedStore";
 import { useAuditCuratedCategories } from "../../hooks/useAuditCuratedCategories";
 import isEqual from "fast-deep-equal";
 import { memo, useCallback } from "react";
@@ -16,8 +15,8 @@ import AssetGrid from "../assets/AssetGrid";
 import WorkflowList from "../workflows/WorkflowList";
 import WorkflowForm from "../workflows/WorkflowForm";
 import AgentPanel from "./AgentPanel";
-import SidebarSearchPanel from "../node_menu/SidebarSearchPanel";
 import HistoryTilesPanel from "../node_menu/HistoryTilesPanel";
+import FavoritesTiles from "../node_menu/FavoritesTiles";
 import QuickAccessSidebar from "../node_menu/QuickAccessSidebar";
 import QuickAccessGrid from "../node_menu/QuickAccessGrid";
 
@@ -30,9 +29,7 @@ import {
 import { useWorkflowManager } from "../../contexts/WorkflowManagerContext";
 import {
   LEFT_PANEL_TOP_LEVEL,
-  NODE_SUBCATEGORIES,
-  getTopLevelCategory,
-  getNodeSubcategory
+  getTopLevelCategory
 } from "../../config/quickAccessCategories";
 import { ContextMenuProvider } from "../../providers/ContextMenuProvider";
 import ContextMenus from "../context_menus/ContextMenus";
@@ -165,49 +162,11 @@ const styles = (
       display: "flex",
       flex: 1,
       height: "100%",
-      overflow: "hidden"
+      overflow: "hidden",
+      padding: isMobile ? 0 : "0 0.75em"
     }
   });
 };
-
-const nodeSubTabsStyles = (theme: Theme) =>
-  css({
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "4px",
-    padding: "6px 8px 8px",
-    borderBottom: `1px solid ${theme.vars.palette.divider}`,
-    "& .node-sub-tab": {
-      padding: "4px 10px",
-      borderRadius: "var(--rounded-md)",
-      color: theme.vars.palette.text.secondary,
-      backgroundColor: "transparent",
-      fontSize: "0.78rem",
-      lineHeight: 1.2,
-      letterSpacing: "0.01em",
-      textTransform: "none",
-      minWidth: "auto",
-      display: "inline-flex",
-      alignItems: "center",
-      gap: "6px",
-      cursor: "pointer",
-      border: "none",
-      transition: "background-color 0.15s ease, color 0.15s ease",
-      "& svg": {
-        fontSize: "0.95rem"
-      },
-      "&:hover": {
-        backgroundColor: `${theme.vars.palette.action.hover}66`,
-        color: theme.vars.palette.text.primary
-      },
-      "&.active": {
-        backgroundColor: `${theme.vars.palette.action.selected}66`,
-        color: theme.vars.palette.primary.main,
-        boxShadow: `0 0 0 1px ${theme.vars.palette.primary.main}44 inset`
-      }
-    }
-  });
-
 
 const VerticalToolbar = memo(function VerticalToolbar({
   activeView,
@@ -247,33 +206,6 @@ const VerticalToolbar = memo(function VerticalToolbar({
   );
 });
 
-const NodesSubTabs = memo(function NodesSubTabs({
-  activeSubcategory,
-  onSubcategoryChange
-}: {
-  activeSubcategory: NodeCategoryId;
-  onSubcategoryChange: (id: NodeCategoryId) => void;
-}) {
-  const theme = useTheme();
-  return (
-    <div css={nodeSubTabsStyles(theme)} role="tablist" aria-label="Node categories">
-      {NODE_SUBCATEGORIES.map((sub) => (
-        <button
-          key={sub.id}
-          role="tab"
-          aria-selected={activeSubcategory === sub.id}
-          className={`node-sub-tab ${activeSubcategory === sub.id ? "active" : ""}`}
-          onClick={() => onSubcategoryChange(sub.id)}
-          type="button"
-        >
-          {sub.icon}
-          <span>{sub.label}</span>
-        </button>
-      ))}
-    </div>
-  );
-});
-
 const PanelContent = memo(function PanelContent({
   activeView,
   activeNodeCategory,
@@ -304,7 +236,6 @@ const PanelContent = memo(function PanelContent({
   }, [navigate, handlePanelToggle]);
 
   if (activeView === "nodes") {
-    const sub = getNodeSubcategory(activeNodeCategory) ?? NODE_SUBCATEGORIES[0];
     return (
       <Box
         sx={{
@@ -312,43 +243,26 @@ const PanelContent = memo(function PanelContent({
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          overflow: "hidden",
-          margin: isMobile ? "0" : "0 0.5em"
+          overflow: "hidden"
         }}
       >
         {!isMobile && <PanelHeadline title="Nodes" />}
-        <NodesSubTabs
-          activeSubcategory={sub.id}
+        <QuickAccessGrid
+          activeSubcategory={activeNodeCategory}
           onSubcategoryChange={setActiveNodeCategory}
         />
-        <QuickAccessGrid category={sub} />
       </Box>
     );
   }
 
   return (
     <>
-      {activeView === "search" && (
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            margin: isMobile ? "0" : "0 0.5em",
-            overflow: "hidden",
-            display: "flex",
-            flexDirection: "column"
-          }}
-        >
-          {!isMobile && <PanelHeadline title="Search nodes" />}
-          <SidebarSearchPanel />
-        </Box>
-      )}
       {activeView === "history" && (
         <Box
           sx={{
             width: "100%",
             height: "100%",
-            margin: isMobile ? "0" : "0 0.5em",
+            
             overflow: "hidden",
             display: "flex",
             flexDirection: "column"
@@ -358,10 +272,33 @@ const PanelContent = memo(function PanelContent({
           <HistoryTilesPanel />
         </Box>
       )}
+      {activeView === "favorites" && (
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            
+            overflow: "hidden",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          {!isMobile && <PanelHeadline title="Favorites" />}
+          <ScrollArea fullHeight>
+            <FavoritesTiles showEmpty hideHeader />
+          </ScrollArea>
+        </Box>
+      )}
       {activeView === "assets" && (
         <Box
           className="assets-container"
-          sx={{ width: "100%", height: "100%", margin: isMobile ? "0" : "0 1em" }}
+          sx={{
+            width: "100%",
+            height: "100%",
+            overflow: "hidden",
+            display: "flex",
+            flexDirection: "column"
+          }}
         >
           {!isMobile && (
             <PanelHeadline
@@ -387,7 +324,7 @@ const PanelContent = memo(function PanelContent({
           sx={{
             width: "100%",
             height: "100%",
-            margin: isMobile ? "0" : "0 1em",
+            
             overflow: "hidden",
             display: "flex",
             flexDirection: "column"
@@ -408,6 +345,7 @@ const PanelContent = memo(function PanelContent({
             overflow: "auto"
           }}
         >
+          {!isMobile && <PanelHeadline title="Settings" />}
           <WorkflowForm workflow={currentWorkflow} onClose={closePanel} />
         </Box>
       )}
@@ -422,6 +360,7 @@ const PanelContent = memo(function PanelContent({
             flexDirection: "column"
           }}
         >
+          {!isMobile && <PanelHeadline title="Agent" />}
           <AgentPanel />
         </Box>
       )}
@@ -607,8 +546,6 @@ const PanelLeft: React.FC = () => {
     handlePanelToggle
   } = useResizePanel("left");
 
-  useCombo(["1"], () => handlePanelToggle("workflows"), false);
-  useCombo(["2"], () => handlePanelToggle("assets"), false);
   useAuditCuratedCategories();
 
   const activeView =
@@ -678,6 +615,15 @@ const PanelLeft: React.FC = () => {
             style={{
               width: `${Math.max(panelSize - TOOLBAR_WIDTH, 250)}px`,
               minWidth: "250px"
+            }}
+            onKeyDown={(e) => {
+              if (
+                e.key === "Escape" &&
+                (activeView === "nodes" || activeView === "workflows")
+              ) {
+                e.stopPropagation();
+                setVisibility(false);
+              }
             }}
           >
             <div
