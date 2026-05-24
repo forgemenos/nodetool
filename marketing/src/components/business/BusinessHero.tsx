@@ -15,7 +15,7 @@ export default function BusinessHero() {
       >
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-white/10 mb-8">
           <BarChart3 className="w-4 h-4 text-emerald-400" />
-          <span className="text-sm font-medium text-slate-300">For studios &amp; creative teams</span>
+          <span className="text-sm font-medium text-neutral-300">For studios &amp; creative teams</span>
         </div>
 
         <h1 id="hero-title" className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
@@ -26,7 +26,7 @@ export default function BusinessHero() {
           </span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-neutral-400 mb-12 max-w-3xl mx-auto leading-relaxed">
           For small studios, post houses, and agency teams who can&apos;t afford
           to rebuild their pipeline every time a vendor gets acquired or
           hikes credit prices. Every major model, your keys, your workflows —
@@ -51,17 +51,17 @@ export default function BusinessHero() {
           </a>
         </div>
 
-        <div className="flex items-center justify-center gap-8 text-sm text-slate-500">
+        <div className="flex items-center justify-center gap-8 text-sm text-neutral-500">
           <span className="flex items-center gap-2">
             <Shield className="w-4 h-4" />
             Your keys, your data
           </span>
-          <span className="w-1 h-1 rounded-full bg-slate-700" />
+          <span className="w-1 h-1 rounded-full bg-neutral-700" />
           <span className="flex items-center gap-2">
             <Zap className="w-4 h-4" />
             No vendor lock-in
           </span>
-          <span className="w-1 h-1 rounded-full bg-slate-700" />
+          <span className="w-1 h-1 rounded-full bg-neutral-700" />
           <span>Self-host or Cloud</span>
         </div>
       </motion.div>
@@ -74,12 +74,12 @@ export default function BusinessHero() {
         className="mt-20 relative"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-[#050510] via-transparent to-transparent z-10 pointer-events-none" />
-        <div className="relative rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-xl overflow-hidden shadow-2xl shadow-emerald-500/10">
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-slate-900/80">
+        <div className="relative rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-xl overflow-hidden shadow-2xl shadow-emerald-500/10">
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-neutral-900/80">
             <div className="w-3 h-3 rounded-full bg-emerald-500/50" />
             <div className="w-3 h-3 rounded-full bg-amber-500/50" />
             <div className="w-3 h-3 rounded-full bg-rose-500/50" />
-            <span className="ml-4 text-xs text-slate-500 font-medium">Studio team workflow</span>
+            <span className="ml-4 text-xs text-neutral-500 font-medium">Studio team workflow</span>
           </div>
           <Image
             src="/screen_canvas.png"

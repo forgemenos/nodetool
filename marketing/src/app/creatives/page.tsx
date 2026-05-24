@@ -274,7 +274,7 @@ export default function CreativesPage() {
                           className={`px-4 py-1.5 text-sm font-medium rounded-full transition-all ${
                             active
                               ? "text-white"
-                              : "text-slate-400 hover:text-white"
+                              : "text-neutral-400 hover:text-white"
                           }`}
                         >
                           {item.name}
@@ -286,7 +286,7 @@ export default function CreativesPage() {
 
                 <button
                   type="button"
-                  className="md:hidden rounded-md p-1.5 text-slate-300 hover:bg-white/5 transition-colors"
+                  className="md:hidden rounded-md p-1.5 text-neutral-300 hover:bg-white/5 transition-colors"
                   onClick={() => setMobileMenuOpen(true)}
                   aria-label="Open menu"
                 >
@@ -336,7 +336,7 @@ export default function CreativesPage() {
                 </Link>
                 <button
                   type="button"
-                  className="rounded-md p-2 text-slate-300 hover:bg-white/5 transition-colors"
+                  className="rounded-md p-2 text-neutral-300 hover:bg-white/5 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                   aria-label="Close menu"
                 >
@@ -349,7 +349,7 @@ export default function CreativesPage() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-3 text-base font-medium text-slate-200 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
+                      className="block px-3 py-3 text-base font-medium text-neutral-200 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -390,7 +390,7 @@ export default function CreativesPage() {
                   </span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-neutral-400 mb-12 max-w-3xl mx-auto leading-relaxed">
                   Every model. Your keys. Your canvas. Wire Seedance, Kling, Veo, Runway,
                   Luma, Suno, Flux, and more on one open-source surface — no credit markup, no vendor lock-in.
                 </p>
@@ -412,7 +412,7 @@ export default function CreativesPage() {
                   </a>
                 </div>
 
-                <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm text-slate-300">
+                <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm text-neutral-300">
                   <li className="flex items-center gap-2.5">
                     <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-amber-500/30 bg-amber-500/10">
                       <Command className="w-4 h-4 text-amber-300" />
@@ -443,12 +443,12 @@ export default function CreativesPage() {
               className="mt-20 relative"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-[#050510] via-transparent to-transparent z-10 pointer-events-none" />
-              <div className="relative rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-xl overflow-hidden shadow-2xl shadow-rose-500/10">
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-slate-900/80">
+              <div className="relative rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-xl overflow-hidden shadow-2xl shadow-rose-500/10">
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-neutral-900/80">
                   <div className="w-3 h-3 rounded-full bg-rose-500/50" />
                   <div className="w-3 h-3 rounded-full bg-amber-500/50" />
                   <div className="w-3 h-3 rounded-full bg-emerald-500/50" />
-                  <span className="ml-4 text-xs text-slate-500 font-medium">
+                  <span className="ml-4 text-xs text-neutral-500 font-medium">
                     Creative Workflow Canvas
                   </span>
                 </div>
@@ -478,7 +478,7 @@ export default function CreativesPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
                 One product shot. Two scenes. A finished video.
               </h2>
-              <p className="text-lg text-slate-400 leading-relaxed">
+              <p className="text-lg text-neutral-400 leading-relaxed">
                 A reference image and two prompts feed Nano Banana Edit, then Veo 3.1 turns
                 the edits into a split-screen ad. Every step lives on the canvas, so you
                 can swap models, tweak prompts, and re-run instantly.
@@ -492,7 +492,7 @@ export default function CreativesPage() {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="relative rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur overflow-hidden shadow-2xl shadow-rose-500/10">
+              <div className="relative rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur overflow-hidden shadow-2xl shadow-rose-500/10">
                 <Image
                   src="/creatives_workflow.png"
                   alt="NodeTool canvas: a sneaker reference image plus two text prompts feeding two Nano Banana Edit nodes, then a Veo 3.1 Image-to-Video node producing a split-screen ad video"
@@ -521,7 +521,7 @@ export default function CreativesPage() {
                   working creatives
                 </span>
               </h2>
-              <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
                 Independent generative artists, motion designers, AI-native illustrators,
                 technical art directors, ComfyUI power users, and Weavy switchers — NodeTool
                 is the open canvas for your work.
@@ -576,13 +576,13 @@ export default function CreativesPage() {
                         <h3 className="text-xl font-semibold text-white mb-3">
                           {persona.title}
                         </h3>
-                        <p className="text-slate-400 leading-relaxed text-[0.95rem] flex-1">
+                        <p className="text-neutral-400 leading-relaxed text-[0.95rem] flex-1">
                           {persona.description}
                         </p>
 
                         <div className="mt-6">
                           <span
-                            className={`inline-flex h-9 w-9 items-center justify-center rounded-full border ${a.border} text-slate-300 transition-colors group-hover:bg-white/5 group-hover:text-white`}
+                            className={`inline-flex h-9 w-9 items-center justify-center rounded-full border ${a.border} text-neutral-300 transition-colors group-hover:bg-white/5 group-hover:text-white`}
                           >
                             <ArrowRight className="w-4 h-4" />
                           </span>
@@ -598,7 +598,7 @@ export default function CreativesPage() {
 
         {/* Features Section */}
         <section id="features" className="py-24 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-900/20 to-transparent pointer-events-none" />
 
           <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
             <motion.div
@@ -616,7 +616,7 @@ export default function CreativesPage() {
                   every modality
                 </span>
               </h2>
-              <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
                 The same models the studios use — Seedance, Kling, Luma, Suno, Flux —
                 wired into one node-based canvas, with masks, inpaint, outpaint,
                 relight, upscale, and compositing built in.
@@ -641,14 +641,14 @@ export default function CreativesPage() {
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                       {feature.title}
                     </h3>
-                    <p className="text-lg text-slate-400 leading-relaxed mb-6">
+                    <p className="text-lg text-neutral-400 leading-relaxed mb-6">
                       {feature.description}
                     </p>
                     <ul className="space-y-3">
                       {feature.features.map((item) => (
                         <li
                           key={item}
-                          className="flex items-center gap-3 text-slate-300"
+                          className="flex items-center gap-3 text-neutral-300"
                         >
                           <Check className="w-5 h-5 text-emerald-400" />
                           {item}
@@ -657,8 +657,8 @@ export default function CreativesPage() {
                     </ul>
                   </div>
                   <div className="flex-1 w-full">
-                    <div className="relative rounded-xl border border-white/10 bg-slate-900/50 backdrop-blur overflow-hidden shadow-2xl">
-                      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-slate-900/80">
+                    <div className="relative rounded-xl border border-white/10 bg-neutral-900/50 backdrop-blur overflow-hidden shadow-2xl">
+                      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-neutral-900/80">
                         <div className="w-3 h-3 rounded-full bg-rose-500/50" />
                         <div className="w-3 h-3 rounded-full bg-amber-500/50" />
                         <div className="w-3 h-3 rounded-full bg-emerald-500/50" />
@@ -705,7 +705,7 @@ export default function CreativesPage() {
                   starting points
                 </span>
               </h2>
-              <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
                 Real workflows for real creative work. Open one, swap models for the ones
                 you prefer, and make it yours.
               </p>
@@ -727,14 +727,14 @@ export default function CreativesPage() {
                     <h3 className="text-xl font-semibold text-white mb-3">
                       {workflow.title}
                     </h3>
-                    <p className="text-slate-400 mb-6">
+                    <p className="text-neutral-400 mb-6">
                       {workflow.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {workflow.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-slate-300 border border-white/10"
+                          className="px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-neutral-300 border border-white/10"
                         >
                           {tag}
                         </span>
@@ -754,7 +754,7 @@ export default function CreativesPage() {
             >
               <a
                 href="https://docs.nodetool.ai/workflows"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:text-white transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:bg-white/10 hover:text-white transition-all"
               >
                 Explore All Templates
                 <ArrowRight className="w-4 h-4" />
@@ -828,7 +828,7 @@ export default function CreativesPage() {
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {benefit.title}
                   </h3>
-                  <p className="text-slate-400 leading-relaxed">
+                  <p className="text-neutral-400 leading-relaxed">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -854,7 +854,7 @@ export default function CreativesPage() {
                   community
                 </span>
               </h2>
-              <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg text-neutral-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Trade workflows, swap prompts, and ship work with other working
                 creatives. NodeTool is open source under AGPL-3.0 — built in the open.
               </p>
@@ -864,11 +864,11 @@ export default function CreativesPage() {
                   href="https://github.com/nodetool-ai/nodetool"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-slate-900 font-semibold hover:bg-slate-100 transition-colors shadow-lg group"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-neutral-900 font-semibold hover:bg-neutral-100 transition-colors shadow-lg group"
                 >
                   <Github className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                   <span>Star on GitHub</span>
-                  <div className="ml-3 pl-3 border-l border-slate-200 text-sm font-normal text-slate-500 flex items-center">
+                  <div className="ml-3 pl-3 border-l border-neutral-200 text-sm font-normal text-neutral-500 flex items-center">
                     <Star className="w-3 h-3 mr-1 text-amber-500 fill-amber-500" />
                     <span>
                       {stars
@@ -908,7 +908,7 @@ export default function CreativesPage() {
                   Your canvas.
                 </span>
               </h2>
-              <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+              <p className="text-xl text-neutral-400 mb-10 max-w-2xl mx-auto">
                 Download NodeTool, plug in the providers you already pay for,
                 and start wiring your next piece on a canvas you actually own.
               </p>
@@ -929,18 +929,18 @@ export default function CreativesPage() {
       <footer className="relative border-t border-white/5 bg-[#050510] py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-neutral-500">
               <span className="text-rose-400">
                 Built with ❤️ by the NodeTool team
               </span>
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-slate-500">
-              <Link href="/" className="hover:text-slate-300 transition-colors">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-neutral-500">
+              <Link href="/" className="hover:text-neutral-300 transition-colors">
                 Home
               </Link>
               <a
                 href="https://github.com/nodetool-ai/nodetool"
-                className="hover:text-slate-300 transition-colors"
+                className="hover:text-neutral-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -948,7 +948,7 @@ export default function CreativesPage() {
               </a>
               <a
                 href="https://discord.gg/WmQTWZRcYE"
-                className="hover:text-slate-300 transition-colors"
+                className="hover:text-neutral-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -956,7 +956,7 @@ export default function CreativesPage() {
               </a>
               <a
                 href="https://docs.nodetool.ai"
-                className="hover:text-slate-300 transition-colors"
+                className="hover:text-neutral-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -964,13 +964,13 @@ export default function CreativesPage() {
               </a>
               <Link
                 href="/privacy"
-                className="hover:text-slate-300 transition-colors"
+                className="hover:text-neutral-300 transition-colors"
               >
                 Privacy
               </Link>
               <Link
                 href="/terms"
-                className="hover:text-slate-300 transition-colors"
+                className="hover:text-neutral-300 transition-colors"
               >
                 Terms
               </Link>

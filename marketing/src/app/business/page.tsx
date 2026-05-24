@@ -215,7 +215,7 @@ export default function BusinessPage() {
       {/* Nav */}
       <header>
         <nav
-          className="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/60 bg-glass supports-[backdrop-filter]:bg-glass shadow-[0_1px_0_0_rgba(16,185,129,0.08)]"
+          className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-800/60 bg-glass supports-[backdrop-filter]:bg-glass shadow-[0_1px_0_0_rgba(16,185,129,0.08)]"
           aria-label="Primary"
         >
           <div className={`${sectionContainer} py-2 sm:py-4 lg:py-2`}>
@@ -238,7 +238,7 @@ export default function BusinessPage() {
                 </a>
               </div>
               {/* Navigation */}
-              <ul className="hidden md:flex items-center gap-2 lg:gap-4 mx-auto rounded-full bg-slate-900/40 ring-1 ring-white/5 px-2 py-1 border border-slate-800/50">
+              <ul className="hidden md:flex items-center gap-2 lg:gap-4 mx-auto rounded-full bg-neutral-900/40 ring-1 ring-white/5 px-2 py-1 border border-neutral-800/50">
                 {navigation.map((item) => {
                   const active = hash === item.href;
                   return (
@@ -248,7 +248,7 @@ export default function BusinessPage() {
                         className={`px-3 py-1.5 text-sm font-medium rounded-full lift ${
                           active
                             ? "bg-emerald-600/25 text-emerald-200 border border-emerald-500/40"
-                            : "text-slate-300 hover:text-emerald-200 hover:bg-slate-800/60"
+                            : "text-neutral-300 hover:text-emerald-200 hover:bg-neutral-800/60"
                         }`}
                         aria-current={active ? "page" : undefined}
                       >
@@ -263,7 +263,7 @@ export default function BusinessPage() {
                 {/* Mobile menu button */}
                 <button
                   type="button"
-                  className="md:hidden rounded-md p-2 text-slate-300 hover:bg-slate-800/60 transition-colors"
+                  className="md:hidden rounded-md p-2 text-neutral-300 hover:bg-neutral-800/60 transition-colors"
                   onClick={() => setMobileMenuOpen(true)}
                   aria-label="Open menu"
                 >
@@ -290,19 +290,19 @@ export default function BusinessPage() {
             <div className="md:hidden flex items-center justify-center gap-2 pt-1.5 pb-0.5">
               <a
                 href="/"
-                className="px-3 py-1 text-xs font-medium rounded-full lift text-slate-300 bg-slate-900/40 ring-1 ring-white/5 border border-slate-800/50 hover:text-blue-200 hover:bg-slate-800/60"
+                className="px-3 py-1 text-xs font-medium rounded-full lift text-neutral-300 bg-neutral-900/40 ring-1 ring-white/5 border border-neutral-800/50 hover:text-blue-200 hover:bg-neutral-800/60"
               >
                 Home
               </a>
               <a
                 href="/agents"
-                className="px-3 py-1 text-xs font-medium rounded-full lift text-slate-300 bg-slate-900/40 ring-1 ring-white/5 border border-slate-800/50 hover:text-blue-200 hover:bg-slate-800/60"
+                className="px-3 py-1 text-xs font-medium rounded-full lift text-neutral-300 bg-neutral-900/40 ring-1 ring-white/5 border border-neutral-800/50 hover:text-blue-200 hover:bg-neutral-800/60"
               >
                 Agents
               </a>
               <a
                 href="/creatives"
-                className="px-3 py-1 text-xs font-medium rounded-full lift text-slate-300 bg-slate-900/40 ring-1 ring-white/5 border border-slate-800/50 hover:text-blue-200 hover:bg-slate-800/60"
+                className="px-3 py-1 text-xs font-medium rounded-full lift text-neutral-300 bg-neutral-900/40 ring-1 ring-white/5 border border-neutral-800/50 hover:text-blue-200 hover:bg-neutral-800/60"
               >
                 Creatives
               </a>
@@ -314,11 +314,11 @@ export default function BusinessPage() {
           <div className="md:hidden fixed inset-0 z-50" role="dialog" aria-modal="true">
             <button
               type="button"
-              className="absolute inset-0 bg-slate-950/90"
+              className="absolute inset-0 bg-neutral-950/90"
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Close menu"
             />
-            <div className="absolute inset-y-0 right-0 w-full overflow-y-auto bg-gradient-to-b from-slate-900 to-slate-950 px-6 py-6 sm:max-w-sm border-l border-slate-800/60">
+            <div className="absolute inset-y-0 right-0 w-full overflow-y-auto bg-gradient-to-b from-neutral-900 to-neutral-950 px-6 py-6 sm:max-w-sm border-l border-neutral-800/60">
               <div className="flex items-center justify-between">
                 <a href="/" className="flex items-center gap-2">
                   <Image
@@ -334,7 +334,7 @@ export default function BusinessPage() {
                 </a>
                 <button
                   type="button"
-                  className="rounded-md p-2 text-slate-300 hover:bg-slate-800/60 transition-colors"
+                  className="rounded-md p-2 text-neutral-300 hover:bg-neutral-800/60 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                   aria-label="Close menu"
                 >
@@ -347,7 +347,7 @@ export default function BusinessPage() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-3 text-base font-medium text-slate-200 hover:bg-slate-800/60 hover:text-white rounded-lg transition-colors"
+                      className="block px-3 py-3 text-base font-medium text-neutral-200 hover:bg-neutral-800/60 hover:text-white rounded-lg transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -394,18 +394,18 @@ export default function BusinessPage() {
       </div>
 
       {/* Footer */}
-      <footer className="relative border-t border-slate-800/50 bg-slate-950 py-10">
+      <footer className="relative border-t border-neutral-800/50 bg-neutral-950 py-10">
         <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-emerald-800/40 to-transparent" />
         <div className={`${sectionContainer}`}>
-          <p className="text-center text-sm text-slate-500">
+          <p className="text-center text-sm text-neutral-500">
             <span className="text-emerald-400">
               Built with ❤️ by the NodeTool team
             </span>
           </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-slate-500">
+          <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-neutral-500">
             <a
               href="https://github.com/nodetool-ai/nodetool"
-              className="hover:text-slate-300 transition-colors"
+              className="hover:text-neutral-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -413,16 +413,16 @@ export default function BusinessPage() {
             </a>
             <a
               href="https://discord.gg/WmQTWZRcYE"
-              className="hover:text-slate-300 transition-colors"
+              className="hover:text-neutral-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
               Discord
             </a>
-            <a href="/privacy" className="hover:text-slate-300 transition-colors">
+            <a href="/privacy" className="hover:text-neutral-300 transition-colors">
               Privacy
             </a>
-            <a href="/terms" className="hover:text-slate-300 transition-colors">
+            <a href="/terms" className="hover:text-neutral-300 transition-colors">
               Terms
             </a>
           </div>

@@ -73,7 +73,7 @@ const navigation = [
 // Utility: common classes
 // Add a semantic `card` class so we can style shared card media globally
 const cardBase =
-  "card relative rounded-2xl bg-slate-900/60 border border-slate-800/60 ring-1 ring-white/5 backdrop-blur-md shadow-soft";
+  "card relative rounded-2xl bg-neutral-900/60 border border-neutral-800/60 ring-1 ring-white/5 backdrop-blur-md shadow-soft";
 const cardHoverUnified = "lift hover:border-blue-500/50 hover:shadow-strong";
 const cardInnerGlow =
   "pointer-events-none absolute inset-0 rounded-2xl opacity-0 motion-safe:transition-opacity motion-safe:duration-300 group-hover:opacity-100";
@@ -360,7 +360,7 @@ export default function Home() {
       {/* Nav */}
       <header>
         <nav
-          className="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/60 bg-glass supports-[backdrop-filter]:bg-glass shadow-[0_1px_0_0_rgba(59,130,246,0.08)]"
+          className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-800/60 bg-glass supports-[backdrop-filter]:bg-glass shadow-[0_1px_0_0_rgba(59,130,246,0.08)]"
           aria-label="Primary"
         >
           <div className={`${sectionContainer} py-2 sm:py-4 lg:py-2`}>
@@ -383,7 +383,7 @@ export default function Home() {
                 </a>
               </div>
               {/* Navigation: centered */}
-              <ul className="hidden md:flex items-center gap-2 lg:gap-4 mx-auto rounded-full bg-slate-900/40 ring-1 ring-white/5 px-2 py-1 border border-slate-800/50">
+              <ul className="hidden md:flex items-center gap-2 lg:gap-4 mx-auto rounded-full bg-neutral-900/40 ring-1 ring-white/5 px-2 py-1 border border-neutral-800/50">
                 {navigation.map((item) => {
                   const active = hash === item.href;
                   return (
@@ -392,7 +392,7 @@ export default function Home() {
                         href={item.href}
                         className={`px-3 py-1.5 text-sm font-medium rounded-full lift ${active
                           ? "bg-blue-600/25 text-blue-200 border border-blue-500/40"
-                          : "text-slate-300 hover:text-blue-200 hover:bg-slate-800/60"
+                          : "text-neutral-300 hover:text-blue-200 hover:bg-neutral-800/60"
                           }`}
                         aria-current={active ? "page" : undefined}
                       >
@@ -407,7 +407,7 @@ export default function Home() {
                 {/* Mobile menu button */}
                 <button
                   type="button"
-                  className="md:hidden rounded-md p-1.5 text-slate-300 hover:bg-slate-800/60 transition-colors"
+                  className="md:hidden rounded-md p-1.5 text-neutral-300 hover:bg-neutral-800/60 transition-colors"
                   onClick={() => setMobileMenuOpen(true)}
                   aria-label="Open menu"
                 >
@@ -417,7 +417,7 @@ export default function Home() {
                   href="https://github.com/nodetool-ai/nodetool"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden sm:inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/70 px-3.5 py-2 text-sm font-semibold text-slate-100 transition-all hover:border-slate-500 hover:bg-slate-800/70"
+                  className="hidden sm:inline-flex items-center gap-2 rounded-xl border border-neutral-700 bg-neutral-900/70 px-3.5 py-2 text-sm font-semibold text-neutral-100 transition-all hover:border-neutral-500 hover:bg-neutral-800/70"
                   aria-label="Star NodeTool on GitHub"
                 >
                   <Image
@@ -429,7 +429,7 @@ export default function Home() {
                   />
                   <span>Star on GitHub</span>
                   {stars !== null && (
-                    <span className="ml-1 rounded-md bg-slate-800 px-1.5 py-0.5 text-xs font-medium text-slate-300">
+                    <span className="ml-1 rounded-md bg-neutral-800 px-1.5 py-0.5 text-xs font-medium text-neutral-300">
                       {stars >= 1000 ? `${(stars / 1000).toFixed(1)}k` : stars}
                     </span>
                   )}
@@ -438,7 +438,7 @@ export default function Home() {
                   href="https://github.com/nodetool-ai/nodetool"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="sm:hidden rounded-lg p-1 transition-all duration-200 hover:bg-slate-800/60"
+                  className="sm:hidden rounded-lg p-1 transition-all duration-200 hover:bg-neutral-800/60"
                   aria-label="NodeTool on GitHub"
                 >
                   <Image
@@ -456,19 +456,19 @@ export default function Home() {
             <div className="md:hidden flex items-center justify-center gap-2 pt-1.5 pb-0.5">
               <a
                 href="/agents"
-                className="px-3 py-1 text-xs font-medium rounded-full lift text-slate-300 bg-slate-900/40 ring-1 ring-white/5 border border-slate-800/50 hover:text-blue-200 hover:bg-slate-800/60"
+                className="px-3 py-1 text-xs font-medium rounded-full lift text-neutral-300 bg-neutral-900/40 ring-1 ring-white/5 border border-neutral-800/50 hover:text-blue-200 hover:bg-neutral-800/60"
               >
                 Agents
               </a>
               <a
                 href="/creatives"
-                className="px-3 py-1 text-xs font-medium rounded-full lift text-slate-300 bg-slate-900/40 ring-1 ring-white/5 border border-slate-800/50 hover:text-blue-200 hover:bg-slate-800/60"
+                className="px-3 py-1 text-xs font-medium rounded-full lift text-neutral-300 bg-neutral-900/40 ring-1 ring-white/5 border border-neutral-800/50 hover:text-blue-200 hover:bg-neutral-800/60"
               >
                 Creatives
               </a>
               <a
                 href="/developers"
-                className="px-3 py-1 text-xs font-medium rounded-full lift text-slate-300 bg-slate-900/40 ring-1 ring-white/5 border border-slate-800/50 hover:text-blue-200 hover:bg-slate-800/60"
+                className="px-3 py-1 text-xs font-medium rounded-full lift text-neutral-300 bg-neutral-900/40 ring-1 ring-white/5 border border-neutral-800/50 hover:text-blue-200 hover:bg-neutral-800/60"
               >
                 Developers
               </a>
@@ -480,11 +480,11 @@ export default function Home() {
           <div className="md:hidden fixed inset-0 z-50" role="dialog" aria-modal="true">
             <button
               type="button"
-              className="absolute inset-0 bg-slate-950/90"
+              className="absolute inset-0 bg-neutral-950/90"
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Close menu"
             />
-            <div className="absolute inset-y-0 right-0 w-full overflow-y-auto bg-gradient-to-b from-slate-900 to-slate-950 px-6 py-6 sm:max-w-sm border-l border-slate-800/60">
+            <div className="absolute inset-y-0 right-0 w-full overflow-y-auto bg-gradient-to-b from-neutral-900 to-neutral-950 px-6 py-6 sm:max-w-sm border-l border-neutral-800/60">
               <div className="flex items-center justify-between">
                 <a href="/" className="flex items-center gap-2">
                   <Image
@@ -500,7 +500,7 @@ export default function Home() {
                 </a>
                 <button
                   type="button"
-                  className="rounded-md p-2 text-slate-300 hover:bg-slate-800/60 transition-colors"
+                  className="rounded-md p-2 text-neutral-300 hover:bg-neutral-800/60 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                   aria-label="Close menu"
                 >
@@ -513,7 +513,7 @@ export default function Home() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-3 text-base font-medium text-slate-200 hover:bg-slate-800/60 hover:text-white rounded-lg transition-colors"
+                      className="block px-3 py-3 text-base font-medium text-neutral-200 hover:bg-neutral-800/60 hover:text-white rounded-lg transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -557,7 +557,7 @@ export default function Home() {
                     "radial-gradient(ellipse at center, rgba(139, 92, 246, 0.3) 0%, rgba(59, 130, 246, 0.2) 40%, transparent 70%)",
                 }}
               />
-              <div className="relative rounded-2xl border border-slate-700/60 bg-slate-900/80 p-2 shadow-2xl shadow-amber-900/20 backdrop-blur-sm ring-1 ring-white/5 overflow-hidden">
+              <div className="relative rounded-2xl border border-neutral-700/60 bg-neutral-900/80 p-2 shadow-2xl shadow-amber-900/20 backdrop-blur-sm ring-1 ring-white/5 overflow-hidden">
                 <video
                   src="/demo.mp4"
                   className="w-full h-auto rounded-xl"
@@ -608,19 +608,19 @@ export default function Home() {
         {/* Feature Modal (accessible) */}
         {selectedFeature && (
           <div
-            className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-950/80 backdrop-blur-md"
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-neutral-950/80 backdrop-blur-md"
             role="dialog"
             aria-modal="true"
             aria-label={selectedFeature.name}
             onClick={() => setSelectedFeature(null)}
           >
             <div
-              className="relative mx-auto max-w-4xl rounded-lg border border-blue-800/50 bg-slate-900 p-4 shadow-2xl shadow-blue-900/30"
+              className="relative mx-auto max-w-4xl rounded-lg border border-blue-800/50 bg-neutral-900 p-4 shadow-2xl shadow-blue-900/30"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 id="feature-close"
-                className={`absolute right-4 top-4 rounded text-slate-300 transition-colors hover:text-white ${focusRingStrong}`}
+                className={`absolute right-4 top-4 rounded text-neutral-300 transition-colors hover:text-white ${focusRingStrong}`}
                 onClick={() => setSelectedFeature(null)}
                 aria-label="Close"
               >
@@ -638,7 +638,7 @@ export default function Home() {
                   className="h-auto w-full rounded-lg"
                 />
               ) : (
-                <div className="p-10 text-center text-slate-300">
+                <div className="p-10 text-center text-neutral-300">
                   No preview available
                 </div>
               )}
@@ -657,20 +657,20 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="relative border-t border-slate-800/50 bg-slate-950/80">
+      <footer className="relative border-t border-neutral-800/50 bg-neutral-950/80">
         <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-800/40 to-transparent" />
         <div className={`${sectionContainer} py-6`}>
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="flex items-center gap-2 text-sm text-slate-400">
+            <p className="flex items-center gap-2 text-sm text-neutral-400">
               <span className="text-rose-400" aria-hidden>
                 ♥
               </span>
               Open source today. The future is yours to build.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-400">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-neutral-400">
               <a
                 href="https://github.com/nodetool-ai/nodetool"
-                className="inline-flex items-center gap-1.5 transition-colors hover:text-slate-100"
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-neutral-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -683,40 +683,40 @@ export default function Home() {
                 />
                 GitHub
               </a>
-              <span className="text-slate-700">•</span>
+              <span className="text-neutral-700">•</span>
               <a
                 href="https://discord.gg/WmQTWZRcYE"
-                className="transition-colors hover:text-slate-100"
+                className="transition-colors hover:text-neutral-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Discord
               </a>
-              <span className="text-slate-700">•</span>
+              <span className="text-neutral-700">•</span>
               <a
                 href="#contact"
-                className="transition-colors hover:text-slate-100"
+                className="transition-colors hover:text-neutral-100"
               >
                 Community
               </a>
-              <span className="text-slate-700">•</span>
+              <span className="text-neutral-700">•</span>
               <a
                 href="/imprint"
-                className="transition-colors hover:text-slate-100"
+                className="transition-colors hover:text-neutral-100"
               >
                 Imprint
               </a>
-              <span className="text-slate-700">•</span>
+              <span className="text-neutral-700">•</span>
               <a
                 href="/privacy"
-                className="transition-colors hover:text-slate-100"
+                className="transition-colors hover:text-neutral-100"
               >
                 Privacy
               </a>
-              <span className="text-slate-700">•</span>
+              <span className="text-neutral-700">•</span>
               <a
                 href="/terms"
-                className="transition-colors hover:text-slate-100"
+                className="transition-colors hover:text-neutral-100"
               >
                 Terms
               </a>

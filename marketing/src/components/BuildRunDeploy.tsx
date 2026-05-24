@@ -95,11 +95,11 @@ function Card({
   const a = accents[accent];
   return (
     <div
-      className={`group relative flex flex-col gap-6 rounded-2xl border border-slate-800/70 bg-slate-900/40 p-6 ring-1 ring-white/5 backdrop-blur-sm transition-all hover:border-slate-700 hover:bg-slate-900/60 ${a.glow}`}
+      className={`group relative flex flex-col gap-6 rounded-2xl border border-neutral-800/70 bg-neutral-900/40 p-6 ring-1 ring-white/5 backdrop-blur-sm transition-all hover:border-neutral-700 hover:bg-neutral-900/60 ${a.glow}`}
     >
       <div className="flex items-start gap-4">
         <div
-          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-slate-700/70 bg-slate-900/80 ring-1 ${a.ring} ${a.text}`}
+          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-neutral-700/70 bg-neutral-900/80 ring-1 ${a.ring} ${a.text}`}
         >
           {icon}
         </div>
@@ -108,13 +108,13 @@ function Card({
             <span className={`mr-2 font-mono text-sm ${a.text}`}>{step}</span>
             {title}
           </h3>
-          <p className="mt-2 text-sm leading-relaxed text-slate-400">
+          <p className="mt-2 text-sm leading-relaxed text-neutral-400">
             {description}
           </p>
         </div>
       </div>
 
-      <div className="mt-auto rounded-xl border border-slate-800/70 bg-slate-950/40 p-3">
+      <div className="mt-auto rounded-xl border border-neutral-800/70 bg-neutral-950/40 p-3">
         {children}
       </div>
     </div>
@@ -137,7 +137,7 @@ function MiniNode({
       >
         {icon}
       </div>
-      <span className="text-[10px] font-medium text-slate-300">{label}</span>
+      <span className="text-[10px] font-medium text-neutral-300">{label}</span>
     </div>
   );
 }
@@ -187,7 +187,7 @@ function RunVisual() {
   return (
     <div className="grid grid-cols-[1fr_auto] gap-3">
       <div>
-        <div className="mb-2 flex items-center justify-between text-[10px] uppercase tracking-wider text-slate-500">
+        <div className="mb-2 flex items-center justify-between text-[10px] uppercase tracking-wider text-neutral-500">
           <span>Logs</span>
           <span className="text-emerald-400">2.4s</span>
         </div>
@@ -195,7 +195,7 @@ function RunVisual() {
           {lines.map((l) => (
             <li
               key={l}
-              className="flex items-center gap-2 text-[11px] text-slate-300"
+              className="flex items-center gap-2 text-[11px] text-neutral-300"
             >
               <Check className="h-3 w-3 text-emerald-400" />
               {l}
@@ -204,16 +204,16 @@ function RunVisual() {
         </ul>
       </div>
       <div className="flex w-24 flex-col">
-        <div className="mb-2 text-[10px] uppercase tracking-wider text-slate-500">
+        <div className="mb-2 text-[10px] uppercase tracking-wider text-neutral-500">
           Preview
         </div>
-        <div className="relative flex-1 overflow-hidden rounded-md border border-slate-800">
+        <div className="relative flex-1 overflow-hidden rounded-md border border-neutral-800">
           <img
             src="/cat.png"
             alt="Generated output"
             className="h-full w-full object-cover"
           />
-          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-black/60 px-1.5 py-0.5 text-[8px] text-slate-300">
+          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-black/60 px-1.5 py-0.5 text-[8px] text-neutral-300">
             <span>1024×1024</span>
             <span>PNG</span>
           </div>
@@ -232,10 +232,10 @@ function DeployTarget({
 }) {
   return (
     <div className="flex flex-col items-center gap-1.5">
-      <div className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-700/70 bg-slate-900/70 text-slate-200">
+      <div className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-700/70 bg-neutral-900/70 text-neutral-200">
         {icon}
       </div>
-      <span className="text-[10px] font-medium text-slate-400">{label}</span>
+      <span className="text-[10px] font-medium text-neutral-400">{label}</span>
     </div>
   );
 }

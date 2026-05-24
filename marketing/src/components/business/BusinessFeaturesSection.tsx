@@ -98,7 +98,7 @@ export default function BusinessFeaturesSection({ reducedMotion }: BusinessFeatu
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             One workspace. Every model. Your keys.
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             Everything your team needs to build, share, and re-run creative AI workflows on a canvas you actually own.
           </p>
         </motion.div>
@@ -118,7 +118,7 @@ export default function BusinessFeaturesSection({ reducedMotion }: BusinessFeatu
                   <feature.icon className={`w-6 h-6 ${feature.color}`} />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{feature.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{feature.description}</p>
               </div>
             </motion.div>
           ))}

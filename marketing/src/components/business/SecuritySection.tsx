@@ -50,7 +50,7 @@ const complianceLogos = [
 export default function SecuritySection({ reducedMotion }: SecuritySectionProps) {
   return (
     <section id="security" className="rhythm-section relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-950/50 to-transparent pointer-events-none" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <motion.div
@@ -66,7 +66,7 @@ export default function SecuritySection({ reducedMotion }: SecuritySectionProps)
             Your keys. Your data. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-amber-400">Your call.</span>
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             Open source, BYOK, and self-hostable — so your team controls where the work runs, where the keys live, and where the files end up.
           </p>
         </motion.div>
@@ -81,12 +81,12 @@ export default function SecuritySection({ reducedMotion }: SecuritySectionProps)
               transition={{ delay: reducedMotion ? 0 : index * 0.08 }}
               className="group"
             >
-              <div className="relative h-full rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-sm p-6 transition-all duration-300 hover:border-blue-500/30 hover:bg-slate-900/70">
+              <div className="relative h-full rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-sm p-6 transition-all duration-300 hover:border-blue-500/30 hover:bg-neutral-900/70">
                 <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <feature.icon className="w-6 h-6 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{feature.description}</p>
+                <p className="text-sm text-neutral-400 leading-relaxed">{feature.description}</p>
               </div>
             </motion.div>
           ))}
@@ -100,7 +100,7 @@ export default function SecuritySection({ reducedMotion }: SecuritySectionProps)
           transition={{ delay: 0.4 }}
           className="text-center"
         >
-          <div className="inline-block rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-xl p-8 md:p-12">
+          <div className="inline-block rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-xl p-8 md:p-12">
             <h3 className="text-xl font-semibold text-white mb-8">Built on open ground</h3>
             <div className="flex flex-wrap items-center justify-center gap-8">
               {complianceLogos.map((compliance, index) => (
@@ -113,11 +113,11 @@ export default function SecuritySection({ reducedMotion }: SecuritySectionProps)
                   className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10"
                 >
                   <Shield className={`w-5 h-5 ${compliance.color}`} />
-                  <span className="text-sm font-medium text-slate-300">{compliance.name}</span>
+                  <span className="text-sm font-medium text-neutral-300">{compliance.name}</span>
                 </motion.div>
               ))}
             </div>
-            <p className="mt-8 text-sm text-slate-400 max-w-2xl mx-auto">
+            <p className="mt-8 text-sm text-neutral-400 max-w-2xl mx-auto">
               Self-hosting puts the same open-source runtime on your hardware, so your team can meet whatever data and infrastructure rules your work needs to follow.
             </p>
           </div>

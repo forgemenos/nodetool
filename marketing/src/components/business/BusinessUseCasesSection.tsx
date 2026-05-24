@@ -72,7 +72,7 @@ export default function BusinessUseCasesSection({ reducedMotion }: BusinessUseCa
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Real workflows for <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">creative teams</span>
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             From small studios to agency creative teams, NodeTool runs the visual AI work your team already does — on a canvas you actually own.
           </p>
         </motion.div>
@@ -92,10 +92,10 @@ export default function BusinessUseCasesSection({ reducedMotion }: BusinessUseCa
                   <useCase.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
+                <p className="text-neutral-300 mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-2">
                   {useCase.examples.map((example) => (
-                    <div key={example} className="flex items-center gap-2 text-sm text-slate-400">
+                    <div key={example} className="flex items-center gap-2 text-sm text-neutral-400">
                       <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                       {example}
                     </div>

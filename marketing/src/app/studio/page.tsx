@@ -211,7 +211,7 @@ export default function StudioPage() {
       {/* Nav */}
       <header>
         <nav
-          className="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/60 bg-glass supports-[backdrop-filter]:bg-glass shadow-[0_1px_0_0_rgba(245,158,11,0.08)]"
+          className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-800/60 bg-glass supports-[backdrop-filter]:bg-glass shadow-[0_1px_0_0_rgba(245,158,11,0.08)]"
           aria-label="Primary"
         >
           <div className={`${sectionContainer} py-2 sm:py-4 lg:py-2`}>
@@ -232,7 +232,7 @@ export default function StudioPage() {
                   </span>
                 </a>
               </div>
-              <ul className="hidden md:flex items-center gap-2 lg:gap-4 mx-auto rounded-full bg-slate-900/40 ring-1 ring-white/5 px-2 py-1 border border-slate-800/50">
+              <ul className="hidden md:flex items-center gap-2 lg:gap-4 mx-auto rounded-full bg-neutral-900/40 ring-1 ring-white/5 px-2 py-1 border border-neutral-800/50">
                 {navigation.map((item) => {
                   const active = hash === item.href;
                   return (
@@ -242,7 +242,7 @@ export default function StudioPage() {
                         className={`px-3 py-1.5 text-sm font-medium rounded-full lift ${
                           active
                             ? "bg-amber-600/25 text-amber-200 border border-amber-500/40"
-                            : "text-slate-300 hover:text-amber-200 hover:bg-slate-800/60"
+                            : "text-neutral-300 hover:text-amber-200 hover:bg-neutral-800/60"
                         }`}
                         aria-current={active ? "page" : undefined}
                       >
@@ -255,7 +255,7 @@ export default function StudioPage() {
               <div className="absolute right-0 flex items-center gap-2 h-full">
                 <button
                   type="button"
-                  className="md:hidden rounded-md p-2 text-slate-300 hover:bg-slate-800/60 transition-colors"
+                  className="md:hidden rounded-md p-2 text-neutral-300 hover:bg-neutral-800/60 transition-colors"
                   onClick={() => setMobileMenuOpen(true)}
                   aria-label="Open menu"
                 >
@@ -288,11 +288,11 @@ export default function StudioPage() {
           >
             <button
               type="button"
-              className="absolute inset-0 bg-slate-950/90"
+              className="absolute inset-0 bg-neutral-950/90"
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Close menu"
             />
-            <div className="absolute inset-y-0 right-0 w-full overflow-y-auto bg-gradient-to-b from-slate-900 to-slate-950 px-6 py-6 sm:max-w-sm border-l border-slate-800/60">
+            <div className="absolute inset-y-0 right-0 w-full overflow-y-auto bg-gradient-to-b from-neutral-900 to-neutral-950 px-6 py-6 sm:max-w-sm border-l border-neutral-800/60">
               <div className="flex items-center justify-between">
                 <a href="/" className="flex items-center gap-2">
                   <Image
@@ -308,7 +308,7 @@ export default function StudioPage() {
                 </a>
                 <button
                   type="button"
-                  className="rounded-md p-2 text-slate-300 hover:bg-slate-800/60 transition-colors"
+                  className="rounded-md p-2 text-neutral-300 hover:bg-neutral-800/60 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                   aria-label="Close menu"
                 >
@@ -321,7 +321,7 @@ export default function StudioPage() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block px-3 py-3 text-base font-medium text-slate-200 hover:bg-slate-800/60 hover:text-white rounded-lg transition-colors"
+                      className="block px-3 py-3 text-base font-medium text-neutral-200 hover:bg-neutral-800/60 hover:text-white rounded-lg transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -362,7 +362,7 @@ export default function StudioPage() {
                     run on your machine.
                   </span>
                 </h1>
-                <p className="mt-6 text-lg text-slate-300 leading-relaxed max-w-xl">
+                <p className="mt-6 text-lg text-neutral-300 leading-relaxed max-w-xl">
                   NodeTool Studio is the desktop app for builders who want their
                   models, data, and outputs to stay local. Use Ollama, MLX, and
                   GGUF models with zero per-token cost — and bring your own keys
@@ -371,20 +371,20 @@ export default function StudioPage() {
                 <div className="mt-8 flex flex-col gap-3">
                   <SmartDownloadButton
                     icon={<Download className="h-5 w-5" />}
-                    classNameOverride="inline-flex w-fit items-center justify-center gap-2 rounded-xl bg-amber-500 px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-amber-900/40 transition-all hover:bg-amber-400 hover:shadow-amber-900/60"
+                    classNameOverride="inline-flex w-fit items-center justify-center gap-2 rounded-xl bg-amber-500 px-6 py-3.5 text-sm font-semibold text-neutral-950 shadow-lg shadow-amber-900/40 transition-all hover:bg-amber-400 hover:shadow-amber-900/60"
                   />
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs text-neutral-400">
                     Free · AGPL-3.0 · macOS, Windows, Linux · No account
                     required ·{" "}
                     <a
                       href="https://github.com/nodetool-ai/nodetool/releases/latest"
-                      className="underline underline-offset-2 hover:text-slate-200"
+                      className="underline underline-offset-2 hover:text-neutral-200"
                     >
                       All downloads
                     </a>
                   </p>
                 </div>
-                <div className="mt-6 inline-flex items-center gap-2 text-sm text-slate-400">
+                <div className="mt-6 inline-flex items-center gap-2 text-sm text-neutral-400">
                   <span>Prefer the browser?</span>
                   <a
                     href="/cloud"
@@ -403,7 +403,7 @@ export default function StudioPage() {
                       "radial-gradient(60% 60% at 50% 0%, rgba(251,191,36,0.30), transparent 60%), radial-gradient(50% 60% at 100% 100%, rgba(244,114,182,0.22), transparent 60%), radial-gradient(50% 60% at 0% 100%, rgba(249,115,22,0.22), transparent 60%)",
                   }}
                 />
-                <div className="rounded-2xl border border-slate-700/60 bg-slate-900/80 p-1.5 shadow-2xl shadow-black/60 ring-1 ring-white/5 backdrop-blur">
+                <div className="rounded-2xl border border-neutral-700/60 bg-neutral-900/80 p-1.5 shadow-2xl shadow-black/60 ring-1 ring-white/5 backdrop-blur">
                   <img
                     src="/screen_canvas.png"
                     alt="NodeTool Studio workflow editor"
@@ -434,7 +434,7 @@ export default function StudioPage() {
               >
                 Privacy, speed, and zero per-token cost.
               </h2>
-              <p className="mt-4 text-lg text-slate-400 leading-relaxed max-w-2xl">
+              <p className="mt-4 text-lg text-neutral-400 leading-relaxed max-w-2xl">
                 Everything Studio does, it can do without a network connection.
                 Your prompts, your files, and your models — all on your hardware.
               </p>
@@ -444,7 +444,7 @@ export default function StudioPage() {
               {proPoints.map((p) => (
                 <div
                   key={p.title}
-                  className="group relative h-full flex flex-col p-7 bg-slate-950 hover:bg-slate-900/60 transition-colors"
+                  className="group relative h-full flex flex-col p-7 bg-neutral-950 hover:bg-neutral-900/60 transition-colors"
                 >
                   <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-amber-300">
                     <p.icon className="h-5 w-5" strokeWidth={1.5} />
@@ -452,7 +452,7 @@ export default function StudioPage() {
                   <h3 className="mb-2 text-base font-semibold tracking-tight text-white">
                     {p.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-slate-400">
+                  <p className="text-sm leading-relaxed text-neutral-400">
                     {p.body}
                   </p>
                 </div>
@@ -468,8 +468,8 @@ export default function StudioPage() {
         >
           <div className={sectionContainer}>
             <header className="mb-10 max-w-3xl">
-              <div className="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                <span className="h-px w-8 bg-slate-500/60" />
+              <div className="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-neutral-400">
+                <span className="h-px w-8 bg-neutral-500/60" />
                 Honest tradeoffs
               </div>
               <h2
@@ -478,7 +478,7 @@ export default function StudioPage() {
               >
                 What Studio asks of you.
               </h2>
-              <p className="mt-4 text-base text-slate-400 leading-relaxed max-w-2xl">
+              <p className="mt-4 text-base text-neutral-400 leading-relaxed max-w-2xl">
                 Local-first means you take on a few things the cloud would
                 otherwise handle. If any of these feel heavy,{" "}
                 <a
@@ -494,12 +494,12 @@ export default function StudioPage() {
               {consPoints.map((c) => (
                 <div
                   key={c.title}
-                  className="rounded-xl border border-slate-800/80 bg-slate-950/60 p-6"
+                  className="rounded-xl border border-neutral-800/80 bg-neutral-950/60 p-6"
                 >
                   <h3 className="text-base font-semibold text-white mb-2">
                     {c.title}
                   </h3>
-                  <p className="text-sm text-slate-400 leading-relaxed">
+                  <p className="text-sm text-neutral-400 leading-relaxed">
                     {c.body}
                   </p>
                 </div>
@@ -528,12 +528,12 @@ export default function StudioPage() {
         {/* Open source reassurance */}
         <section className="rhythm-section py-16">
           <div className={sectionContainer}>
-            <div className="mx-auto max-w-3xl rounded-2xl border border-slate-800/80 bg-slate-950/60 p-8 text-center">
-              <Github className="mx-auto h-8 w-8 text-slate-300 mb-4" />
+            <div className="mx-auto max-w-3xl rounded-2xl border border-neutral-800/80 bg-neutral-950/60 p-8 text-center">
+              <Github className="mx-auto h-8 w-8 text-neutral-300 mb-4" />
               <h2 className="text-2xl md:text-3xl font-bold text-white">
                 100% open source. Always.
               </h2>
-              <p className="mt-4 text-slate-400 leading-relaxed">
+              <p className="mt-4 text-neutral-400 leading-relaxed">
                 Studio is released under AGPL-3.0. Every node, every provider,
                 every line of the runtime is on GitHub. Audit it, fork it,
                 self-host it — there is no separate &ldquo;pro&rdquo; codebase.
@@ -542,7 +542,7 @@ export default function StudioPage() {
                 href="https://github.com/nodetool-ai/nodetool"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-100 hover:border-slate-500 hover:bg-slate-800 transition-colors"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg border border-neutral-700 bg-neutral-900 px-4 py-2 text-sm font-semibold text-neutral-100 hover:border-neutral-500 hover:bg-neutral-800 transition-colors"
               >
                 <Github className="h-4 w-4" />
                 View source on GitHub
@@ -559,24 +559,24 @@ export default function StudioPage() {
         <ContactSection />
       </div>
 
-      <footer className="relative border-t border-slate-800/50 bg-slate-950 py-10">
+      <footer className="relative border-t border-neutral-800/50 bg-neutral-950 py-10">
         <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-amber-800/40 to-transparent" />
         <div className={sectionContainer}>
-          <p className="text-center text-sm text-slate-500">
+          <p className="text-center text-sm text-neutral-500">
             <span className="text-amber-400">
               Open source today. The future is yours to build.
             </span>
           </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-slate-500">
-            <a href="/" className="hover:text-slate-300 transition-colors">
+          <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-neutral-500">
+            <a href="/" className="hover:text-neutral-300 transition-colors">
               Home
             </a>
-            <a href="/cloud" className="hover:text-slate-300 transition-colors">
+            <a href="/cloud" className="hover:text-neutral-300 transition-colors">
               Cloud
             </a>
             <a
               href="https://github.com/nodetool-ai/nodetool"
-              className="hover:text-slate-300 transition-colors"
+              className="hover:text-neutral-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -584,16 +584,16 @@ export default function StudioPage() {
             </a>
             <a
               href="https://discord.gg/WmQTWZRcYE"
-              className="hover:text-slate-300 transition-colors"
+              className="hover:text-neutral-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
               Discord
             </a>
-            <a href="/privacy" className="hover:text-slate-300 transition-colors">
+            <a href="/privacy" className="hover:text-neutral-300 transition-colors">
               Privacy
             </a>
-            <a href="/terms" className="hover:text-slate-300 transition-colors">
+            <a href="/terms" className="hover:text-neutral-300 transition-colors">
               Terms
             </a>
           </div>

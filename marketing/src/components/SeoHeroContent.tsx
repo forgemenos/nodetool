@@ -13,7 +13,7 @@ export default function SeoHeroContent() {
         <h1 id="definition" className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
           NodeTool: The Open Creative AI Workspace
         </h1>
-        <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+        <p className="text-lg text-neutral-300 mb-8 leading-relaxed">
           NodeTool is the open-source creative AI workspace — every major model
           from every major provider, wired into one node-based canvas you run
           on your own machine. Bring your own keys to FAL, KIE, OpenAI,
@@ -29,7 +29,7 @@ export default function SeoHeroContent() {
         <h2 id="problem" className="text-xl font-semibold text-white mb-3">
           What Problem Does NodeTool Solve?
         </h2>
-        <p className="text-slate-300 leading-relaxed">
+        <p className="text-neutral-300 leading-relaxed">
           A new state-of-the-art model ships every other week. Reaching it
           today means juggling Midjourney, Runway, ElevenLabs, and Photoshop
           across a dozen tabs — or paying a closed SaaS canvas to mark up its
@@ -45,7 +45,7 @@ export default function SeoHeroContent() {
         <h2 id="audience" className="text-xl font-semibold text-white mb-3">
           Who Is NodeTool For?
         </h2>
-        <ul className="space-y-2 text-slate-300">
+        <ul className="space-y-2 text-neutral-300">
           <li>• Independent generative artists and AI-native illustrators</li>
           <li>• Motion designers and technical art directors</li>
           <li>• ComfyUI power users who want better UX without losing control</li>
@@ -59,7 +59,7 @@ export default function SeoHeroContent() {
         <h2 id="proof" className="text-xl font-semibold text-white mb-3">
           What Vendor Neutrality Actually Buys You
         </h2>
-        <p className="text-slate-300 leading-relaxed">
+        <p className="text-neutral-300 leading-relaxed">
           Seedance is the best video model right now. It runs on FAL, Replicate,
           and KIE at three different prices — NodeTool lets you pick the
           cheapest, no contract, no markup. When Veo 4 ships next month, the
@@ -74,7 +74,7 @@ export default function SeoHeroContent() {
         <h2 id="differences" className="text-xl font-semibold text-white mb-3">
           How NodeTool Differs From Alternatives
         </h2>
-        <div className="space-y-3 text-slate-300">
+        <div className="space-y-3 text-neutral-300">
           <div>
             <strong className="text-white">vs ComfyUI:</strong> ComfyUI is a
             Stable Diffusion power tool with engineer-first UX. NodeTool is a
@@ -102,7 +102,7 @@ export default function SeoHeroContent() {
         <h2 id="not" className="text-xl font-semibold text-white mb-3">
           What NodeTool Is Not
         </h2>
-        <ul className="space-y-2 text-slate-300">
+        <ul className="space-y-2 text-neutral-300">
           <li>• Not a model host. We don&apos;t run inference on our servers and resell it.</li>
           <li>• Not a credit system. No proprietary tokens, no minimum top-up, no markup on model calls.</li>
           <li>• Not a closed platform. Open source, runnable anywhere, no &quot;pro tier&quot; hiding the good features.</li>
@@ -111,7 +111,7 @@ export default function SeoHeroContent() {
       </section>
 
       {/* Quick Facts */}
-      <section aria-labelledby="facts" className="mt-10 text-slate-400 border-t border-slate-800/50 pt-6">
+      <section aria-labelledby="facts" className="mt-10 text-neutral-400 border-t border-neutral-800/50 pt-6">
         <h2 id="facts" className="sr-only">Quick Facts</h2>
         <dl className="space-y-2 text-sm">
           <div><dt className="inline font-semibold">License:</dt> <dd className="inline">Open Source (AGPL-3.0)</dd></div>

@@ -53,7 +53,7 @@ export default function ROISection({ reducedMotion }: ROISectionProps) {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             What <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">vendor neutrality</span> actually buys you
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
             Open source, BYOK, and one canvas across providers — the math gets much friendlier when nobody&apos;s sitting between you and the model.
           </p>
         </motion.div>
@@ -68,15 +68,15 @@ export default function ROISection({ reducedMotion }: ROISectionProps) {
               transition={{ delay: reducedMotion ? 0 : index * 0.1 }}
               className="group"
             >
-              <div className="relative h-full rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900/60 to-slate-900/30 backdrop-blur-sm p-8 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/10">
+              <div className="relative h-full rounded-2xl border border-white/10 bg-gradient-to-br from-neutral-900/60 to-neutral-900/30 backdrop-blur-sm p-8 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/10">
                 <div className="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <benefit.icon className="w-7 h-7 text-emerald-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-sm text-slate-400 mb-6 leading-relaxed">{benefit.description}</p>
+                <p className="text-sm text-neutral-400 mb-6 leading-relaxed">{benefit.description}</p>
                 <div className="pt-6 border-t border-white/10">
                   <div className="text-2xl font-bold text-emerald-400 mb-1">{benefit.metric}</div>
-                  <div className="text-xs text-slate-500 uppercase tracking-wider">{benefit.label}</div>
+                  <div className="text-xs text-neutral-500 uppercase tracking-wider">{benefit.label}</div>
                 </div>
               </div>
             </motion.div>
@@ -94,7 +94,7 @@ export default function ROISection({ reducedMotion }: ROISectionProps) {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Run the numbers on your own stack
             </h3>
-            <p className="text-slate-300 mb-6 max-w-2xl">
+            <p className="text-neutral-300 mb-6 max-w-2xl">
               Most teams see the math change the day they stop paying for resold tokens. Bring your own keys, run local models when it fits, and put the savings back into the work.
             </p>
             <a
