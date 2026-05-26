@@ -578,7 +578,11 @@ app.addHook("onRequest", async (req, reply) => {
     pathname.startsWith("/api/assets/packages/") ||
     pathname === "/api/nodes/metadata" ||
     pathname === "/api/node/metadata" ||
-    isPublicWorkflowMetadataRequest(pathname, req.method)
+    isPublicWorkflowMetadataRequest(pathname, req.method) ||
+    // ── ForgeOS patch: allow unauthenticated GETs on storage so images render
+    // inline in the canvas (browser <img> tags don't send Bearer tokens).
+    // URLs are UUIDs, so unguessable. Acceptable for a private deployment.
+    (req.method === "GET" && pathname.startsWith("/api/storage/"))
   ) {
     return;
   }
